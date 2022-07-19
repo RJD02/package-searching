@@ -1,12 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Provider } from "react-redux";
+import RepositoriesList from "./components/RepositoriesList";
+import { store } from "./state";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hi</h1>
-    </div>
+    <Provider store={store}>
+      <div>
+        <h1>Search for a Package</h1>
+        <RepositoriesList />
+      </div>
+    </Provider>
   );
 }
 
